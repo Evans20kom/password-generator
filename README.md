@@ -72,12 +72,13 @@ A number of sources were used for the development of this application:
 https://www.w3schools.com/howto/howto_css_switch.asp</li>
 <li>Looked for code for an input box here:
 https://www.w3schools.com/html/html_form_input_types.asp</li>
+<li>Found an approach to read html values of a toggle switch here:
+https://stackoverflow.com/questions/11599666/get-the-value-of-checked-checkbox and here: https://www.javatpoint.com/how-to-get-all-checked-checkbox-value-in-javascript</li>
+
 
 # *** EDIT BEFORE SUBMITTING ***
 
 
-<li>Identified name of array in starter code here:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</li>
 
 <li>Looked for details on two dimensional arrays and code here:
 https://www.freecodecamp.org/news/javascript-2d-arrays/</li>
