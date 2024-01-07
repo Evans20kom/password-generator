@@ -91,7 +91,7 @@ var upperCasedCharacters = [
 // Function to receive prompt from user for password options and assign prompt to "charactersToUse" Array.
 function getPasswordOptions() {
   var generateToggleArray = document.querySelector('#generate'); //https://www.w3schools.com/jsref/obj_window.asp
-  
+  var input = document.getElementById("characterLength").value
   
   generateToggleArray.addEventListener('click', (e) => {
     e.preventDefault();
@@ -103,9 +103,17 @@ function getPasswordOptions() {
       }
       
     })
-     console.log(charactersToUse);
+  console.log(charactersToUse);
+  console.log(input)
   })
 }
+
+//Function to receive prompt from user for password lenght and assign prompt to "passwordLength" variable.
+function getPasswordLength() {
+var passwordLength = document.getElementById("characterLength").value;
+return passwordLength;
+}
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
