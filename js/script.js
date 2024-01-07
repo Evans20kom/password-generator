@@ -88,12 +88,12 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Function to prompt user for password options
+// Function to receive prompt from user for password options and assign prompt to "charactersToUse" Array.
 function getPasswordOptions() {
-  var generateBtn = document.querySelector('#generate'); //https://www.w3schools.com/jsref/obj_window.asp
+  var generateToggleArray = document.querySelector('#generate'); //https://www.w3schools.com/jsref/obj_window.asp
   
   
-  generateBtn.addEventListener('click', (e) => {
+  generateToggleArray.addEventListener('click', (e) => {
     e.preventDefault();
   
     let charactersToUse = [];
@@ -102,9 +102,8 @@ function getPasswordOptions() {
         charactersToUse.push(toggle.value);
       }
       
-    });
+    })
      console.log(charactersToUse);
-  
   })
 }
 
