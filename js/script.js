@@ -88,14 +88,6 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-//Add event listener to generate button
-var generateBtn = document.querySelector('#generate');
-generateBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  getPasswordOptions();
-  getPasswordLength();
-});
-
 // Function to receive prompt from user for password options and assign prompt to "charactersToUse" Array.
 function getPasswordOptions() {
   
@@ -132,7 +124,7 @@ function getPasswordLength() {
 // }
 
 // // Get references to the #generate element
-// var generateBtn = document.querySelector('#generate');
+var generateBtn = document.querySelector('#generate'); //https://www.w3schools.com/jsref/obj_window.asp
 
 // // Write password to the #password input
 // function writePassword() {
@@ -142,8 +134,12 @@ function getPasswordLength() {
 //   passwordText.value = password;
 // }
 
-// // Add event listener to generate button
-// generateBtn.addEventListener('click', writePassword);
+// Add event listener to generate button - Starter Code Altered to fit application structure.
+generateBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  getPasswordOptions();
+  getPasswordLength();
+});
 
 
 //*** UNCOMMENT WHEN READY
