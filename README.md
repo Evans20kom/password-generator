@@ -68,13 +68,17 @@ A number of sources were used for the development of this application:
 <ul>
 <li>Chris H - Central Grader: On the challenge for week 3, they alerted me to the fact that the presentation of my README file is not the expected one; upon investigating, I realized that markdown syntax was not correct</li>
 <li>CG Collin - Central Grader: After grading the challenge for week 4, they confirmed that the corrections I made to the README file were acceptable; based on this feedback, I maintained the previous REAME file structure as a template for future projects.</li>
+<li>Source for toggle switch for user input - html and css sourced from w3schools:
+https://www.w3schools.com/howto/howto_css_switch.asp</li>
+<li>Looked for code for an input box here:
+https://www.w3schools.com/html/html_form_input_types.asp</li>
+<li>Found an approach to read html values of a toggle switch here:
+https://stackoverflow.com/questions/11599666/get-the-value-of-checked-checkbox and here: https://www.javatpoint.com/how-to-get-all-checked-checkbox-value-in-javascript</li>
+
 
 # *** EDIT BEFORE SUBMITTING ***
-<li>In my attempt to identify the type of array, I found this source:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map</li>
 
-<li>Identified name of array in starter code here:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</li>
+
 
 <li>Looked for details on two dimensional arrays and code here:
 https://www.freecodecamp.org/news/javascript-2d-arrays/</li>

@@ -16,6 +16,45 @@
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+
+
+        <div class="user-input">
+        <!-- Rounded switch - code source: w3schools website - https://www.w3schools.com/howto/howto_css_switch.asp . Code Sourced begins here -->
+        <p>
+          <label class="switch">
+            <input type="checkbox" value="lowerCase">
+            <span class="slider round"> </span> 
+          </label> Lower Case Letters 
+        </p>
+
+        <p>
+          <label class="switch">
+            <input type="checkbox" value="upperCase">
+            <span class="slider round"> </span> 
+          </label> Upper Case Letters 
+        </p>
+
+        <p>
+          <label class="switch">
+            <input type="checkbox" value="numbers">
+            <span class="slider round"> </span> 
+          </label> Numbers 
+        </p>
+
+        <p>
+          <label class="switch">
+            <input type="checkbox" value="specialCharacters">
+            <span class="slider round"> </span> 
+          </label> Special Characters (e.g. */+) 
+        </p>
+        <!-- Rounded switch - code source: w3schools website - https://www.w3schools.com/howto/howto_css_switch.asp . Code Sourced begins here -->
+        <form>
+          <label for="characterLength">Password Length (insert a number from 8 - 128): </label><input type="text" id="characterLength" placeholder="8-128 characters" name="characterLength">
+        </form>
+        
+        </div>
+        
+
         <div class="card-body">
           <textarea
             readonly
@@ -25,7 +64,7 @@
           ></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <button id="generate" class="btn" onclick="getPasswordOptions()">Generate Password</button>
         </div>
       </div>
     </div>
