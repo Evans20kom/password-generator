@@ -17,11 +17,10 @@ While building this application, I have learnt about two-dimensional arrays and 
 
 ## Table of Contents (Optional)
 
-# *** EDIT BEFORE SUBMITTING ***
-You can find the deployed application [here](https://evans20kom.github.io/Console-Finances/): https://evans20kom.github.io/Console-Finances/
+You can find the deployed application [here](https://evans20kom.github.io/password-manager/): https://evans20kom.github.io/password-manager/
 
-You can find the github repo [here](https://github.com/Evans20kom/Console-Finances): https://github.com/Evans20kom/Console-Finances
-# *** EDIT BEFORE SUBMITTING ***
+You can find the github repo [here](https://github.com/Evans20kom/password-manager): https://github.com/Evans20kom/password-manager
+
 
 ## Installation
 
@@ -29,9 +28,14 @@ N/A
 
 ## Usage
 
+
+
+When you open the deployed application [here](https://evans20kom.github.io/password-manager/), 
+
+
 # *** EDIT BEFORE SUBMITTING ***
 
-When you open the deployed application [here](https://evans20kom.github.io/Console-Finances/), a blank page will appear that prompts you to look in the console window:
+a blank page will appear that prompts you to look in the console window:
     
 
     ![Open application on Browser](img/Instructions1.png)
@@ -74,6 +78,9 @@ https://www.w3schools.com/howto/howto_css_switch.asp</li>
 https://www.w3schools.com/html/html_form_input_types.asp</li>
 <li>Found an approach to read html values of a toggle switch here:
 https://stackoverflow.com/questions/11599666/get-the-value-of-checked-checkbox and here: https://www.javatpoint.com/how-to-get-all-checked-checkbox-value-in-javascript</li>
+<li>Attempt 2 at testing toggles, found the approach here:
+https://www.youtube.com/watch?v=TjpL8U_vxOo and studied further here:<br> <ul><li>https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector</li><li>https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault</li><li>https://www.w3schools.com/jsref/met_element_addeventlistener.asp</li>
+</li>
 
 
 # *** EDIT BEFORE SUBMITTING ***
