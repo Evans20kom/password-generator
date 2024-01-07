@@ -88,12 +88,17 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+//Add event listener to generate button
+var generateBtn = document.querySelector('#generate');
+generateBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  getPasswordOptions();
+  getPasswordLength();
+});
+
 // Function to receive prompt from user for password options and assign prompt to "charactersToUse" Array.
 function getPasswordOptions() {
-  var generateToggleArray = document.querySelector('#generate'); //https://www.w3schools.com/jsref/obj_window.asp
   
-  generateToggleArray.addEventListener('click', (e) => {
-    e.preventDefault();
   
     let charactersToUse = [];
     document.querySelectorAll('[type="checkbox"]').forEach(toggle => {
@@ -103,40 +108,45 @@ function getPasswordOptions() {
       
     })
   console.log(charactersToUse);
-  })
-}
+  }
 
 //Function to receive prompt from user for password lenght and assign prompt to "passwordLength" variable.
 function getPasswordLength() {
 
   var passwordLength = document.getElementById("characterLength").value;
-return passwordLength;
-}
-
-
-// Function for getting a random element from an array
-function getRandom(arr) {
+  console.log(passwordLength);
 
 }
 
-// Function to generate password with user input
-function generatePassword() {
 
-}
+//***UNCOMMENT WHEN READY
 
-// Get references to the #generate element
-var generateBtn = document.querySelector('#generate');
+// // Function for getting a random element from an array
+// function getRandom(arr) {
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector('#password');
+// }
 
-  passwordText.value = password;
-}
+// // Function to generate password with user input
+// function generatePassword() {
 
-// Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);
+// }
+
+// // Get references to the #generate element
+// var generateBtn = document.querySelector('#generate');
+
+// // Write password to the #password input
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector('#password');
+
+//   passwordText.value = password;
+// }
+
+// // Add event listener to generate button
+// generateBtn.addEventListener('click', writePassword);
+
+
+//*** UNCOMMENT WHEN READY
 
 //test for toggle buttons
 //approaches on how to read html elements in javascript sourced from: https://stackoverflow.com/questions/11599666/get-the-value-of-checked-checkbox and https://www.javatpoint.com/how-to-get-all-checked-checkbox-value-in-javascript.
