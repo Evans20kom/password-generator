@@ -90,7 +90,22 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+  var generateBtn = document.querySelector('#generate'); //https://www.w3schools.com/jsref/obj_window.asp
+  
+  
+  generateBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+  
+    let charactersToUse = [];
+    document.querySelectorAll('[type="checkbox"]').forEach(toggle => {
+      if (toggle.checked === true) {
+        charactersToUse.push(toggle.value);
+      }
+      
+    });
+     console.log(charactersToUse);
+  
+  })
 }
 
 // Function for getting a random element from an array
@@ -130,4 +145,30 @@ generateBtn.addEventListener('click', writePassword);
 // } else {
 //   console.log("Error")
 // }
+
+
+
+//Test for toggles approach 2 sourced from: https://www.youtube.com/watch?v=TjpL8U_vxOo
+//Further reading found here: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector ; 
+// https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault ;
+// https://www.w3schools.com/jsref/met_element_addeventlistener.asp
+// var generateBtn = document.querySelector('#generate'); //https://www.w3schools.com/jsref/obj_window.asp
+
+
+// generateBtn.addEventListener('click', (e) => {
+//   e.preventDefault();
+
+//   let charactersToUse = [];
+//   document.querySelectorAll('[type="checkbox"]').forEach(toggle => {
+//     if (toggle.checked === true) {
+//       charactersToUse.push(toggle.value);
+//     }
+    
+//   });
+//    console.log(charactersToUse);
+
+// })
+
+
+//Test concluded here: approach successfully stores toggle values in array.
 
