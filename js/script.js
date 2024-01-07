@@ -119,14 +119,15 @@ generateBtn.addEventListener('click', writePassword);
 
 //test for toggle buttons
 //approaches on how to read html elements in javascript sourced from: https://stackoverflow.com/questions/11599666/get-the-value-of-checked-checkbox and https://www.javatpoint.com/how-to-get-all-checked-checkbox-value-in-javascript.
+//Approach not performing as expected. Switch to different approach below
+// var toggleLowerCase = document.getElementById("lowerCase").value;
+// console.log(toggleLowerCase)
 
-var toggleLowerCase = document.getElementById("lowerCase").value;
-console.log(toggleLowerCase)
+// if (toggleLowerCase == "off") {
+//   console.log("Lower Case is off")
+// } else if (toggleLowerCase == "on") {
+//   console.log("Lower Case is on")
+// } else {
+//   console.log("Error")
+// }
 
-if (toggleLowerCase == "off") {
-  console.log("Lower Case is off")
-} else if (toggleLowerCase == "on") {
-  console.log("Lower Case is on")
-} else {
-  console.log("Error")
-}
