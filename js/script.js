@@ -88,11 +88,42 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+//declare all posible combinations of variables above using the concat method.
+
+//Combinations of two - Lower Case:
+var lowerCaseUpperCase = lowerCasedCharacters.concat(upperCasedCharacters);
+var lowerCaseNumeric = lowerCasedCharacters.concat(numericCharacters);
+var lowerCaseSpecialCharacters = lowerCasedCharacters.concat(specialCharacters);
+
+//Combinations of two - Upper Case:
+var upperCaseNumeric = upperCasedCharacters.concat(numericCharacters);
+var upperCaseSpecialCharacters = upperCasedCharacters.concat(specialCharacters);
+
+//Combinations of two - Special Characters:
+var specialCharactersNumeric = specialCharacters.concat(numericCharacters);
+
+//Combinations of three - Lower Case - Upper Case:
+var lowerUpperNumeric = lowerCaseUpperCase.concat(numericCharacters);
+var lowerUpperSpecial = lowerCaseUpperCase.concat(specialCharacters);
+
+//combinations of three - Special Characters - Numeric:
+var specialNumericLower = specialCharactersNumeric.concat(lowerCasedCharacters);
+var specialNumericUpper = specialCharactersNumeric.concat(upperCasedCharacters);
+
+//combination of all four:
+var lowerUpperNumericSpecial = lowerCaseUpperCase.concat(specialCharactersNumeric);
+
+
+
+
+
+
+console.log(lowerUpperCase);
+console.log(specialCharactersNumeric);
+
 // Function to receive prompt from user for password options and assign prompt to "charactersToUse" Array.
 function getPasswordOptions() {
-  
-  
-    let charactersToUse = [];
+  let charactersToUse = [];
     document.querySelectorAll('[type="checkbox"]').forEach(toggle => {
       if (toggle.checked === true) {
         charactersToUse.push(toggle.value);
@@ -104,11 +135,11 @@ function getPasswordOptions() {
 
 //Function to receive prompt from user for password lenght and assign prompt to "passwordLength" variable.
 function getPasswordLength() {
-
   var passwordLength = document.getElementById("characterLength").value;
   console.log(passwordLength);
-
 }
+
+
 
 
 //***UNCOMMENT WHEN READY
