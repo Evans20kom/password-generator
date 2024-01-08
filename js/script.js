@@ -113,14 +113,6 @@ var specialNumericUpper = specialCharactersNumeric.concat(upperCasedCharacters);
 //combination of all four:
 var lowerUpperNumericSpecial = lowerCaseUpperCase.concat(specialCharactersNumeric);
 
-
-
-
-
-
-console.log(lowerUpperCase);
-console.log(specialCharactersNumeric);
-
 // Function to receive prompt from user for password options and assign prompt to "charactersToUse" Array.
 function getPasswordOptions() {
   let charactersToUse = [];
@@ -130,13 +122,27 @@ function getPasswordOptions() {
       }
       
     })
-  console.log(charactersToUse);
+  console.log(charactersToUse.length)
+  if (charactersToUse.length == 0){
+    alert("Please, select at least one character type using the toggle buttons below")
+  }
+  else {console.log(charactersToUse);
+  }
   }
 
 //Function to receive prompt from user for password lenght and assign prompt to "passwordLength" variable.
 function getPasswordLength() {
-  var passwordLength = document.getElementById("characterLength").value;
-  console.log(passwordLength);
+  //User input saved in variable as a string
+  var rawUserInput = document.getElementById("characterLength").value;
+  //Convert string to number. Approach found here: https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascript/
+  var passwordLength = rawUserInput*1;
+  if (Number.isInteger(passwordLength)) {
+      if (passwordLength>7 && passwordLength<129) {
+      console.log(passwordLength);
+      } else {alert("Please select a number between 8 and 128")
+      } 
+  } else {alert("Please select an integer between 8 and 128")
+  }
 }
 
 

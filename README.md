@@ -81,14 +81,15 @@ https://stackoverflow.com/questions/11599666/get-the-value-of-checked-checkbox a
 <li>Attempt 2 at testing toggles, found the approach here:
 https://www.youtube.com/watch?v=TjpL8U_vxOo and studied further here:<br> <ul><li>https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector</li><li>https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault</li><li>https://www.w3schools.com/jsref/met_element_addeventlistener.asp</li>
 </li>
+<li>Looked for a method to convert a string into a number here:
+https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascript/</li>
 
 
 # *** EDIT BEFORE SUBMITTING ***
 
 
 
-<li>Looked for details on two dimensional arrays and code here:
-https://www.freecodecamp.org/news/javascript-2d-arrays/</li>
+
 
 <li>Found how to add within an array here:
 https://www.freecodecamp.org/news/how-to-add-numbers-in-javascript-arrays/</li>
