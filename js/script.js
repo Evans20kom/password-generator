@@ -190,8 +190,15 @@ generateBtn.addEventListener('click', (e) => {
   e.preventDefault();
   getPasswordOptions();
   getPasswordLength();
+  let aaaa = ["lowerCase", "upperCase"];
+  let charactersToUse = getPasswordOptions();
+  if ( charactersToUse === aaaa ) {
+    console.log("yay!")
+  } else {
+    console.log("uh oh!")
+  }[]
 
-  writePassword();
+  //writePassword();
 });
 
 
