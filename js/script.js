@@ -87,7 +87,6 @@ var upperCasedCharacters = [
   'Y',
   'Z'
 ];
-
 //declare all posible combinations of variables above using the concat method.
 
 //Combinations of two - Lower Case:
@@ -131,7 +130,11 @@ function getPasswordOptions() {
   }
   }
 
-//Function to receive prompt from user for password lenght and assign prompt to "passwordLength" variable.
+//Function to 
+// 1: receive prompt from user for password lenth.
+// 2: Test if user input is desirable.
+// 3: Prompt user to correct input if undesirable.
+// 4: Assign prompt to "passwordLength" variable and return for generate password function (see below).
 function getPasswordLength() {
   //User input saved in variable as a string
   var rawUserInput = document.getElementById("characterLength").value;
@@ -158,15 +161,17 @@ function getPasswordLength() {
 // }
 
 // Function to generate password with user input
-function generatePassword(passwordLength, characterSelection) {
+function generatePassword(characterSelection) {
+  let passwordLength= getPasswordLength(); //Method proposed by Asim Mahar, found here: https://stackoverflow.com/questions/10579713/passing-a-local-variable-from-one-function-to-another
   let finalPassword = [];
-  for (var characterNumber = 0; characterNumber <= passwordLength; characterNumber++) {
+  let randomCharacter = 0;
+  for (var characterNumber = 0; characterNumber < passwordLength; characterNumber++) {
     //Random Number Generation Approach found: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-    var randomCharacter = Math.floor(Math.random() * characterSelection.length);
-    console.log(randomCharacter); 
-    finalPassword += characterSelection(randomCharacter);
+    randomCharacter = Math.floor(Math.random() * characterSelection.length); 
+    finalPassword += characterSelection[randomCharacter];
   }
-  console.log(finalPassword);
+  return finalPassword;
+  
 }
 
 // // Get references to the #generate element
@@ -185,7 +190,7 @@ generateBtn.addEventListener('click', (e) => {
   e.preventDefault();
   getPasswordOptions();
   getPasswordLength();
-  generatePassword(getPasswordLength, lowerUpperNumericSpecial);
+  generatePassword(lowerUpperNumericSpecial);
 });
 
 

@@ -83,7 +83,10 @@ https://www.youtube.com/watch?v=TjpL8U_vxOo and studied further here:<br> <ul><l
 </li>
 <li>Looked for a method to convert a string into a number here:
 https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascript/</li>
-
+<li>Found the approach to calculate a random number here:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random</li>
+<li>Asim Mahar - Stack Overflow: Proposed method that helped me access function local variable through a different function. Method Proposed here:
+https://stackoverflow.com/questions/10579713/passing-a-local-variable-from-one-function-to-another</li>
 
 # *** EDIT BEFORE SUBMITTING ***
 
@@ -91,11 +94,9 @@ https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascr
 
 
 
-<li>Found the approach to calculate a random number here:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random</li>
 
-<li>Found how to subtract negative numbers here:
-https://stackoverflow.com/questions/27589902/addition-and-subtraction-with-negative-numbers</li>
+
+
 
 <li>Found how to convert number to string here:
 https://www.digitalocean.com/community/tutorials/how-to-convert-data-types-in-javascript#converting-values-to-strings</li>
