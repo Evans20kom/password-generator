@@ -87,28 +87,108 @@ var upperCasedCharacters = [
   'Y',
   'Z'
 ];
+//Obsolete
+// //declare all posible combinations of variables above using the concat method.
+
+// //Combinations of two - Lower Case:
+// var lowerCaseUpperCase = lowerCasedCharacters.concat(upperCasedCharacters);
+// var lowerCaseNumeric = lowerCasedCharacters.concat(numericCharacters);
+// var lowerCaseSpecialCharacters = lowerCasedCharacters.concat(specialCharacters);
+
+// //Combinations of two - Upper Case:
+// var upperCaseNumeric = upperCasedCharacters.concat(numericCharacters);
+// var upperCaseSpecialCharacters = upperCasedCharacters.concat(specialCharacters);
+
+// //Combinations of two - Special Characters:
+// var specialCharactersNumeric = specialCharacters.concat(numericCharacters);
+
+// //Combinations of three - Lower Case - Upper Case:
+// var lowerUpperNumeric = lowerCaseUpperCase.concat(numericCharacters);
+// var lowerUpperSpecial = lowerCaseUpperCase.concat(specialCharacters);
+
+// //combinations of three - Special Characters - Numeric:
+// var specialNumericLower = specialCharactersNumeric.concat(lowerCasedCharacters);
+// var specialNumericUpper = specialCharactersNumeric.concat(upperCasedCharacters);
+
+// //combination of all four:
+// var lowerUpperNumericSpecial = lowerCaseUpperCase.concat(specialCharactersNumeric);
 
 // Function to receive prompt from user for password options and assign prompt to "charactersToUse" Array.
-function getPasswordOptions() {
-  
-  
+//Rewritten function to identify all possible password character combinations (based on user input) and return them as a single value to be used by the generatePassword function
+//Retrospectively, this function can probably be written more efficiently. Due to deadline issues, it will be deployed, and code will be revisited at a later date.
+  function getPasswordOptions() {
     let charactersToUse = [];
-    document.querySelectorAll('[type="checkbox"]').forEach(toggle => {
-      if (toggle.checked === true) {
-        charactersToUse.push(toggle.value);
+    let lowerCase = document.querySelector("#lowerCase");
+    let upperCase = document.querySelector("#upperCase");
+    let numeric = document.querySelector("#numbers");
+    let special = document.querySelector("#specialCharacters");
+    
+    if (lowerCase.checked) {
+      if (lowerCase.checked && upperCase.checked) {
+        if (lowerCase.checked && upperCase.checked && numeric.checked) {
+          if (lowerCase.checked && upperCase.checked && numeric.checked && special.checked) { 
+            charactersToUse = lowerCasedCharacters.concat(upperCasedCharacters, numericCharacters, specialCharacters);
+            } else {charactersToUse = lowerCasedCharacters.concat(upperCasedCharacters, numericCharacters);}
+          }
+          else if (lowerCase.checked && upperCase.checked && special.checked) {
+            charactersToUse = lowerCasedCharacters.concat(upperCasedCharacters, specialCharacters);
+          } else {charactersToUse = lowerCasedCharacters.concat(upperCasedCharacters);}
+        } else if(lowerCase.checked && numeric.checked) {
+          if(lowerCase.checked && numeric.checked && special.checked) {
+            charactersToUse = lowerCasedCharacters.concat(numericCharacters, specialCharacters);
+          } else {charactersToUse = lowerCasedCharacters.concat(numericCharacters);}
+        }else if (lowerCase.checked && special.checked) {
+          charactersToUse = lowerCasedCharacters.concat(specialCharacters);
+        } else {charactersToUse = lowerCasedCharacters}
       }
-      
-    })
-  console.log(charactersToUse);
+    
+    else if (upperCase.checked) {
+      if(upperCase.checked && numeric.checked) {
+        if(upperCase.checked && numeric.checked && special.checked) {
+          charactersToUse = upperCasedCharacters.concat(numericCharacters, specialCharacters);
+        } else {charactersToUse = upperCasedCharacters.concat(numericCharacters);}
+      } else if (upperCase.checked && special.checked) {
+        charactersToUse = upperCasedCharacters.concat(specialCharacters);
+      } else {charactersToUse = upperCasedCharacters;}
+    }
+    
+    else if (numeric.checked) {
+      if(numeric.checked && special.checked) {
+        charactersToUse = numericCharacters.concat(specialCharacters);
+      } else {charactersToUse = numericCharacters;}
+    } 
+    
+    else if (special.checked) {
+        charactersToUse = specialCharacters;
+    } 
+    
+    else {alert("Please, select at least one character type using the toggle buttons below")}
+    return charactersToUse;
+    console.log(charactersToUse);
   }
+  
 
-//Function to receive prompt from user for password lenght and assign prompt to "passwordLength" variable.
+//Function to 
+// 1: receive prompt from user for password lenth.
+// 2: Test if user input is desirable.
+// 3: Prompt user to correct input if undesirable.
+// 4: Assign prompt to "passwordLength" variable and return for generate password function (see below).
 function getPasswordLength() {
-
-  var passwordLength = document.getElementById("characterLength").value;
-  console.log(passwordLength);
-
+  //User input saved in variable as a string
+  var rawUserInput = document.getElementById("characterLength").value;
+  //Convert string to number. Approach found here: https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascript/
+  var passwordLength = rawUserInput*1;
+  if (Number.isInteger(passwordLength)) {
+      if (passwordLength>7 && passwordLength<129) {
+      console.log(passwordLength);
+      return passwordLength;
+      } else {alert("Please select a number between 8 and 128")
+      } 
+  } else {alert("Please select an integer between 8 and 128")
+  }
 }
+
+
 
 
 //***UNCOMMENT WHEN READY
@@ -118,27 +198,45 @@ function getPasswordLength() {
 
 // }
 
-// // Function to generate password with user input
-// function generatePassword() {
-
-// }
+// Function to generate password with user input
+function generatePassword(characterSelection) {
+  let passwordLength= getPasswordLength(); //Method proposed by Asim Mahar, found here: https://stackoverflow.com/questions/10579713/passing-a-local-variable-from-one-function-to-another
+  let finalPassword = [];
+  let randomCharacter = 0;
+  for (var characterNumber = 0; characterNumber < passwordLength; characterNumber++) {
+    //Random Number Generation Approach found: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+    randomCharacter = Math.floor(Math.random() * characterSelection.length); 
+    finalPassword += characterSelection[randomCharacter];
+  }
+  console.log(finalPassword)
+  return finalPassword;
+}
 
 // // Get references to the #generate element
 var generateBtn = document.querySelector('#generate'); //https://www.w3schools.com/jsref/obj_window.asp
 
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector('#password');
+// Write password to the #password input
+function writePassword() {
+   var password = generatePassword(lowerUpperNumericSpecial);
+   var passwordText = document.querySelector('#password');
 
-//   passwordText.value = password;
-// }
+   passwordText.value = password;
+ }
 
 // Add event listener to generate button - Starter Code Altered to fit application structure.
 generateBtn.addEventListener('click', (e) => {
   e.preventDefault();
   getPasswordOptions();
   getPasswordLength();
+  let aaaa = ["lowerCase", "upperCase"];
+  let charactersToUse = getPasswordOptions();
+  if ( charactersToUse === aaaa ) {
+    console.log("yay!")
+  } else {
+    console.log("uh oh!")
+  }[]
+
+  //writePassword();
 });
 
 

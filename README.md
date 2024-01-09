@@ -81,20 +81,22 @@ https://stackoverflow.com/questions/11599666/get-the-value-of-checked-checkbox a
 <li>Attempt 2 at testing toggles, found the approach here:
 https://www.youtube.com/watch?v=TjpL8U_vxOo and studied further here:<br> <ul><li>https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector</li><li>https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault</li><li>https://www.w3schools.com/jsref/met_element_addeventlistener.asp</li>
 </li>
-
+<li>Looked for a method to convert a string into a number here:
+https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascript/</li>
+<li>Found the approach to calculate a random number here:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random</li>
+<li>Asim Mahar - Stack Overflow: Proposed method that helped me access function local variable through a different function. Method Proposed here:
+https://stackoverflow.com/questions/10579713/passing-a-local-variable-from-one-function-to-another</li>
 
 # *** EDIT BEFORE SUBMITTING ***
 
 
 
-<li>Looked for details on two dimensional arrays and code here:
-https://www.freecodecamp.org/news/javascript-2d-arrays/</li>
 
-<li>Found how to add within an array here:
-https://www.freecodecamp.org/news/how-to-add-numbers-in-javascript-arrays/</li>
 
-<li>Found how to subtract negative numbers here:
-https://stackoverflow.com/questions/27589902/addition-and-subtraction-with-negative-numbers</li>
+
+
+
 
 <li>Found how to convert number to string here:
 https://www.digitalocean.com/community/tutorials/how-to-convert-data-types-in-javascript#converting-values-to-strings</li>
