@@ -170,27 +170,28 @@ function generatePassword(characterSelection) {
     randomCharacter = Math.floor(Math.random() * characterSelection.length); 
     finalPassword += characterSelection[randomCharacter];
   }
+  console.log(finalPassword)
   return finalPassword;
-  
 }
 
 // // Get references to the #generate element
 var generateBtn = document.querySelector('#generate'); //https://www.w3schools.com/jsref/obj_window.asp
 
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector('#password');
+// Write password to the #password input
+function writePassword() {
+   var password = generatePassword(lowerUpperNumericSpecial);
+   var passwordText = document.querySelector('#password');
 
-//   passwordText.value = password;
-// }
+   passwordText.value = password;
+ }
 
 // Add event listener to generate button - Starter Code Altered to fit application structure.
 generateBtn.addEventListener('click', (e) => {
   e.preventDefault();
   getPasswordOptions();
   getPasswordLength();
-  generatePassword(lowerUpperNumericSpecial);
+
+  writePassword();
 });
 
 
