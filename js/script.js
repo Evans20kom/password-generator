@@ -162,9 +162,12 @@ var upperCasedCharacters = [
         charactersToUse = specialCharacters;
     } 
     
-    else {alert("Please, select at least one character type using the toggle buttons below")}
+    else {
+      alert("Please, select at least one character type using the toggle buttons below");
+      charactersToUse = [""]
+  }
     return charactersToUse;
-    console.log(charactersToUse);
+    
   }
   
 
@@ -180,7 +183,6 @@ function getPasswordLength() {
   var passwordLength = rawUserInput*1;
   if (Number.isInteger(passwordLength)) {
       if (passwordLength>7 && passwordLength<129) {
-      console.log(passwordLength);
       return passwordLength;
       } else {alert("Please select a number between 8 and 128")
       } 
@@ -199,16 +201,17 @@ function getPasswordLength() {
 // }
 
 // Function to generate password with user input
-function generatePassword(characterSelection) {
+function generatePassword() {
   let passwordLength= getPasswordLength(); //Method proposed by Asim Mahar, found here: https://stackoverflow.com/questions/10579713/passing-a-local-variable-from-one-function-to-another
+  let charactersToUse = getPasswordOptions(); //Same as above
   let finalPassword = [];
   let randomCharacter = 0;
   for (var characterNumber = 0; characterNumber < passwordLength; characterNumber++) {
     //Random Number Generation Approach found: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-    randomCharacter = Math.floor(Math.random() * characterSelection.length); 
-    finalPassword += characterSelection[randomCharacter];
+    randomCharacter = Math.floor(Math.random() * charactersToUse.length); 
+    finalPassword += charactersToUse[randomCharacter];
   }
-  console.log(finalPassword)
+  
   return finalPassword;
 }
 
@@ -217,8 +220,8 @@ var generateBtn = document.querySelector('#generate'); //https://www.w3schools.c
 
 // Write password to the #password input
 function writePassword() {
-   var password = generatePassword(lowerUpperNumericSpecial);
-   var passwordText = document.querySelector('#password');
+  var password = generatePassword();
+  var passwordText = document.querySelector('#password');
 
    passwordText.value = password;
  }
@@ -228,14 +231,8 @@ generateBtn.addEventListener('click', (e) => {
   e.preventDefault();
   getPasswordOptions();
   getPasswordLength();
-  let aaaa = ["lowerCase", "upperCase"];
-  let charactersToUse = getPasswordOptions();
-  if ( charactersToUse === aaaa ) {
-    console.log("yay!")
-  } else {
-    console.log("uh oh!")
-  }[]
-
+  generatePassword();
+  writePassword();
   //writePassword();
 });
 
