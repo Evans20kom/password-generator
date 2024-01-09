@@ -122,11 +122,12 @@ function getPasswordOptions() {
       }
       
     })
-  console.log(charactersToUse.length)
   if (charactersToUse.length == 0){
     alert("Please, select at least one character type using the toggle buttons below")
   }
-  else {console.log(charactersToUse);
+  else {
+  console.log(charactersToUse);
+  return charactersToUse;
   }
   }
 
@@ -139,6 +140,7 @@ function getPasswordLength() {
   if (Number.isInteger(passwordLength)) {
       if (passwordLength>7 && passwordLength<129) {
       console.log(passwordLength);
+      return passwordLength;
       } else {alert("Please select a number between 8 and 128")
       } 
   } else {alert("Please select an integer between 8 and 128")
@@ -155,10 +157,17 @@ function getPasswordLength() {
 
 // }
 
-// // Function to generate password with user input
-// function generatePassword() {
-
-// }
+// Function to generate password with user input
+function generatePassword(passwordLength, characterSelection) {
+  let finalPassword = [];
+  for (var characterNumber = 0; characterNumber <= passwordLength; characterNumber++) {
+    //Random Number Generation Approach found: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+    var randomCharacter = Math.floor(Math.random() * characterSelection.length);
+    console.log(randomCharacter); 
+    finalPassword += characterSelection(randomCharacter);
+  }
+  console.log(finalPassword);
+}
 
 // // Get references to the #generate element
 var generateBtn = document.querySelector('#generate'); //https://www.w3schools.com/jsref/obj_window.asp
@@ -176,6 +185,7 @@ generateBtn.addEventListener('click', (e) => {
   e.preventDefault();
   getPasswordOptions();
   getPasswordLength();
+  generatePassword(getPasswordLength, lowerUpperNumericSpecial);
 });
 
 

@@ -91,8 +91,8 @@ https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascr
 
 
 
-<li>Found how to add within an array here:
-https://www.freecodecamp.org/news/how-to-add-numbers-in-javascript-arrays/</li>
+<li>Found the approach to calculate a random number here:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random</li>
 
 <li>Found how to subtract negative numbers here:
 https://stackoverflow.com/questions/27589902/addition-and-subtraction-with-negative-numbers</li>
