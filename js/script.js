@@ -167,7 +167,7 @@ var upperCasedCharacters = [
       charactersToUse = [""]
   }
     return charactersToUse;
-    console.log(charactersToUse);
+    
   }
   
 
@@ -183,7 +183,6 @@ function getPasswordLength() {
   var passwordLength = rawUserInput*1;
   if (Number.isInteger(passwordLength)) {
       if (passwordLength>7 && passwordLength<129) {
-      console.log(passwordLength);
       return passwordLength;
       } else {alert("Please select a number between 8 and 128")
       } 
@@ -212,7 +211,7 @@ function generatePassword() {
     randomCharacter = Math.floor(Math.random() * charactersToUse.length); 
     finalPassword += charactersToUse[randomCharacter];
   }
-  console.log(finalPassword)
+  
   return finalPassword;
 }
 
