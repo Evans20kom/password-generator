@@ -1,4 +1,4 @@
-# Password Manager - Github Repo password-generator https://evans20kom.github.io/password-generator/
+# Password Manager - Github Repo password-generator https://github.com/Evans20kom/password-generator
 
 
 ## Description
@@ -17,7 +17,7 @@ While building this application, I have learnt about a variety of array methods 
 
 You can find the deployed application [here](https://evans20kom.github.io/password-manager/): https://evans20kom.github.io/password-manager/
 
-You can find the github repo [here](https://github.com/Evans20kom/password-manager): https://github.com/Evans20kom/password-manager
+You can find the github repo [here](https://github.com/Evans20kom/password-generator): https://github.com/Evans20kom/password-manager
 
 
 ## Installation
