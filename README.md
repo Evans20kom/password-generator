@@ -15,9 +15,9 @@ While building this application, I have learnt about a variety of array methods 
 
 ## Table of Contents (Optional)
 
-You can find the deployed application [here](https://evans20kom.github.io/password-manager/): https://evans20kom.github.io/password-manager/
+You can find the deployed application [here](https://evans20kom.github.io/password-generator/): https://evans20kom.github.io/password-generator/
 
-You can find the github repo [here](https://github.com/Evans20kom/password-generator): https://github.com/Evans20kom/password-manager
+You can find the github repo [here](https://github.com/Evans20kom/password-generator): https://github.com/Evans20kom/password-generator
 
 
 ## Installation
