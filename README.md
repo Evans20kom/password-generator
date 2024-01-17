@@ -1,4 +1,4 @@
-# Password Manager - Github Repo password-manager https://evans20kom.github.io/password-manager/
+# Password Manager - Github Repo password-generator https://evans20kom.github.io/password-generator/
 
 
 ## Description
